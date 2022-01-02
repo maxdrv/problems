@@ -1,7 +1,7 @@
 package org.home.maxdrv;
 
 /**
- * @see <a href="https://leetcode.com/problems/squares-of-a-sorted-array/">https://leetcode.com/problems/squares-of-a-sorted-array/</a>
+ * https://leetcode.com/problems/squares-of-a-sorted-array
  */
 public class SquaresOfASortedArray {
 
