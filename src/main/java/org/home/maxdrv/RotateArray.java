@@ -4,7 +4,7 @@ package org.home.maxdrv;
  * https://leetcode.com/problems/rotate-array/
  *
  * !!! high memory usage
- *
+ * TODO: fix memory to O(1)
  */
 public class RotateArray {
 
