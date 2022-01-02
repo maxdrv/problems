@@ -1,5 +1,8 @@
 package org.home.maxdrv;
 
+/**
+ * https://leetcode.com/problems/binary-search/
+ */
 public class BinarySearch {
 
     public int search(int[] nums, int k) {
