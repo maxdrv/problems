@@ -1,5 +1,8 @@
 package org.home.maxdrv;
 
+/**
+ * https://leetcode.com/problems/move-zeroes/solution/
+ */
 public class MoveZeroes {
 
     public void moveZeroes(int[] nums) {
