@@ -1,8 +1,8 @@
 package org.home.maxdrv;
 
-public class MoveZeros {
+public class MoveZeroes {
 
-    public void moveZeros(int[] nums) {
+    public void moveZeroes(int[] nums) {
         int j = 0;
 
         for (int i = 0; i < nums.length; i++) {

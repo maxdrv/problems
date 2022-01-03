@@ -28,7 +28,7 @@ class MoveZerosTest {
     }
 
     private static void exec(int[] arr) {
-        new MoveZeros().moveZeros(arr);
+        new MoveZeroes().moveZeroes(arr);
     }
 
 }
