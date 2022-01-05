@@ -2,6 +2,9 @@ package org.home.maxdrv;
 
 import org.home.maxdrv.ds.ListNode;
 
+/**
+ * https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+ */
 public class RemoveNthNodeFromEndOfList {
 
     public ListNode removeNthFromEnd(ListNode head, int n) {
