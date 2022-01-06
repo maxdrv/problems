@@ -42,8 +42,9 @@ class PermutationInStringTest {
 
     private static List<Arguments> functions() {
         BiFunction<String, String, Boolean> old = (s1, s2) -> new PermutationInStringV1().checkInclusion(s1, s2);
+        BiFunction<String, String, Boolean> newOne = (s1, s2) -> new PermutationInString().checkInclusion(s1, s2);
 
-        return List.of(Arguments.of(old));
+        return List.of(Arguments.of(old), Arguments.of(newOne));
     }
 
 }
