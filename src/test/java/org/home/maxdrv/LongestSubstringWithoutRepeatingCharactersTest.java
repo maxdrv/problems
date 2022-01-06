@@ -1,62 +1,78 @@
 package org.home.maxdrv;
 
-import org.junit.jupiter.api.Test;
+import org.home.maxdrv.old.LongestSubstringWithoutRepeatingCharactersV1;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.MethodSource;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.List;
+import java.util.function.Function;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LongestSubstringWithoutRepeatingCharactersTest {
 
-    @Test
-    void test01() {
+    @ParameterizedTest
+    @MethodSource("functions")
+    void test01(Function<String, Integer> func) {
         String s = "abcabcbb";
-        int actual = exec(s);
+        int actual = func.apply(s);
         assertEquals(3, actual);
     }
 
-    @Test
-    void test02() {
+    @ParameterizedTest
+    @MethodSource("functions")
+    void test02(Function<String, Integer> func) {
         String s = "bbbbbb";
-        int actual = exec(s);
+        int actual = func.apply(s);
         assertEquals(1, actual);
     }
 
-    @Test
-    void test03() {
+    @ParameterizedTest
+    @MethodSource("functions")
+    void test03(Function<String, Integer> func) {
         String s = "pwwkew";
-        int actual = exec(s);
+        int actual = func.apply(s);
         assertEquals(3, actual);
     }
 
-    @Test
-    void test04() {
+    @ParameterizedTest
+    @MethodSource("functions")
+    void test04(Function<String, Integer> func) {
         String s = " ";
-        int actual = exec(s);
+        int actual = func.apply(s);
         assertEquals(1, actual);
     }
 
-    @Test
-    void test05() {
+    @ParameterizedTest
+    @MethodSource("functions")
+    void test05(Function<String, Integer> func) {
         String s = "abcdef";
-        int actual = exec(s);
+        int actual = func.apply(s);
         assertEquals(6, actual);
     }
 
-    @Test
-    void test06() {
+    @ParameterizedTest
+    @MethodSource("functions")
+    void test06(Function<String, Integer> func) {
         String s = "dvdf";
-        int actual = exec(s);
+        int actual = func.apply(s);
         assertEquals(3, actual);
     }
 
-    @Test
-    void test07() {
+    @ParameterizedTest
+    @MethodSource("functions")
+    void test07(Function<String, Integer> func) {
         String s = "abba";
-        int actual = exec(s);
+        int actual = func.apply(s);
         assertEquals(2, actual);
     }
 
-    private static int exec(String s) {
-        return new LongestSubstringWithoutRepeatingCharacters().lengthOfLongestSubstring(s);
+    private static List<Arguments> functions() {
+        Function<String, Integer> old = (s) -> new LongestSubstringWithoutRepeatingCharactersV1().lengthOfLongestSubstring(s);
+        Function<String, Integer> newOne = (s) -> new LongestSubstringWithoutRepeatingCharacters().lengthOfLongestSubstring(s);
+
+        return List.of(Arguments.of(old), Arguments.of(newOne));
     }
 
 }
