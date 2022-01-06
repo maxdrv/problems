@@ -1,4 +1,4 @@
-package org.home.maxdrv;
+package org.home.maxdrv.old;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +10,7 @@ import java.util.Map;
  *
  * thinking to substitute Map to char[]
  */
-public class PermutationInString {
+public class PermutationInStringV1 {
 
     public boolean checkInclusion(String s1, String s2) {
         if (s1.length() > s2.length()) {
