@@ -1,8 +1,9 @@
 package org.home.maxdrv;
 
 import org.home.maxdrv.ds.ListNode;
-import org.home.maxdrv.util.Asserts;
 import org.junit.jupiter.api.Test;
+
+import static org.home.maxdrv.util.Asserts.assertEquals;
 
 class MiddleOfLInkedListTest {
 
@@ -21,7 +22,7 @@ class MiddleOfLInkedListTest {
                                 new ListNode(5, null)));
 
         ListNode actual = exec(head);
-        Asserts.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -40,7 +41,7 @@ class MiddleOfLInkedListTest {
                                 new ListNode(6, null)));
 
         ListNode actual = exec(head);
-        Asserts.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     private static ListNode exec(ListNode head) {

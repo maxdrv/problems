@@ -1,8 +1,9 @@
 package org.home.maxdrv;
 
 import org.home.maxdrv.ds.ListNode;
-import org.home.maxdrv.util.Asserts;
 import org.junit.jupiter.api.Test;
+
+import static org.home.maxdrv.util.Asserts.assertEquals;
 
 class RemoveNthNodeFromEndOfListTest {
 
@@ -13,7 +14,7 @@ class RemoveNthNodeFromEndOfListTest {
                         new ListNode(2, null));
 
         ListNode actual = exec(head, 1);
-        Asserts.assertEquals(new ListNode(1, null), actual);
+        assertEquals(new ListNode(1, null), actual);
     }
 
     @Test
@@ -23,7 +24,7 @@ class RemoveNthNodeFromEndOfListTest {
                         new ListNode(2, null));
 
         ListNode actual = exec(head, 2);
-        Asserts.assertEquals(new ListNode(2, null), actual);
+        assertEquals(new ListNode(2, null), actual);
     }
 
     @Test
@@ -32,7 +33,7 @@ class RemoveNthNodeFromEndOfListTest {
                 new ListNode(1, null);
 
         ListNode actual = exec(head, 1);
-        Asserts.assertEquals(null, actual);
+        assertEquals(null, actual);
     }
 
     @Test
@@ -51,7 +52,7 @@ class RemoveNthNodeFromEndOfListTest {
                                         new ListNode(5, null))));
 
         ListNode actual = exec(head, 2);
-        Asserts.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     private static ListNode exec(ListNode head, int n) {
