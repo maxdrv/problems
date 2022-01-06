@@ -1,4 +1,4 @@
-package org.home.maxdrv;
+package org.home.maxdrv.old;
 
 import java.util.Arrays;
 
@@ -16,7 +16,7 @@ import java.util.Arrays;
  * TODO: this solution is better but still slow and consumes a lot of memory. I need to look at the hints for this problem.
  *
  */
-public class PermutationInString {
+public class PermutationInStringV2 {
 
     public boolean checkInclusion(String s1, String s2) {
         if (s1.length() > s2.length()) {
