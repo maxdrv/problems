@@ -1,5 +1,7 @@
 package org.home.maxdrv;
 
+import org.home.maxdrv.ds.Coordinates;
+
 import java.util.ArrayDeque;
 import java.util.Queue;
 
@@ -13,7 +15,7 @@ import java.util.Queue;
  * |   | x |   |
  * | x | o | x |
  * |   | x |   |
- *
+ * <p>
  * TODO: this solution working but its slow and memory expensive
  * how to fix?
  * 1. Queue -> recursion
@@ -55,25 +57,6 @@ public class FloodFill {
         }
 
         return image;
-    }
-
-    private static class Coordinates {
-
-        private final int x;
-        private final int y;
-
-        public Coordinates(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-
-        public int x() {
-            return x;
-        }
-
-        public int y() {
-            return y;
-        }
     }
 
 }
