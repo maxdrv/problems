@@ -12,6 +12,8 @@ import java.util.Arrays;
  * ten time faster and less memory usage than
  * {@link org.home.maxdrv.old.PermutationInStringV2}
  *
+ * TODO: how to optimize sliding windows
+ *
  */
 public class PermutationInString {
 
