@@ -9,39 +9,16 @@ class MiddleOfLInkedListTest {
 
     @Test
     void test01() {
-        ListNode head =
-                new ListNode(1,
-                        new ListNode(2,
-                                new ListNode(3,
-                                        new ListNode(4,
-                                                new ListNode(5, null)))));
-
-        ListNode expected =
-                new ListNode(3,
-                        new ListNode(4,
-                                new ListNode(5, null)));
-
+        ListNode head = ListNode.of(1, 2, 3, 4, 5);
         ListNode actual = exec(head);
-        assertEquals(expected, actual);
+        assertEquals(ListNode.of(3, 4, 5), actual);
     }
 
     @Test
     void test02() {
-        ListNode head =
-                new ListNode(1,
-                        new ListNode(2,
-                                new ListNode(3,
-                                        new ListNode(4,
-                                                new ListNode(5,
-                                                        new ListNode(6, null))))));
-
-        ListNode expected =
-                new ListNode(4,
-                        new ListNode(5,
-                                new ListNode(6, null)));
-
+        ListNode head = ListNode.of(1, 2, 3, 4, 5, 6);
         ListNode actual = exec(head);
-        assertEquals(expected, actual);
+        assertEquals(ListNode.of(4, 5, 6), actual);
     }
 
     private static ListNode exec(ListNode head) {

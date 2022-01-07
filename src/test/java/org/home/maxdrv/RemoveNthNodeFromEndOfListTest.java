@@ -4,55 +4,36 @@ import org.home.maxdrv.ds.ListNode;
 import org.junit.jupiter.api.Test;
 
 import static org.home.maxdrv.util.Asserts.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 class RemoveNthNodeFromEndOfListTest {
 
     @Test
     void test01() {
-        ListNode head =
-                new ListNode(1,
-                        new ListNode(2, null));
-
+        ListNode head = ListNode.of(1, 2);
         ListNode actual = exec(head, 1);
-        assertEquals(new ListNode(1, null), actual);
+        assertEquals(ListNode.of(1), actual);
     }
 
     @Test
     void test02() {
-        ListNode head =
-                new ListNode(1,
-                        new ListNode(2, null));
-
+        ListNode head = ListNode.of(1, 2);
         ListNode actual = exec(head, 2);
-        assertEquals(new ListNode(2, null), actual);
+        assertEquals(ListNode.of(2), actual);
     }
 
     @Test
     void test03() {
-        ListNode head =
-                new ListNode(1, null);
-
+        ListNode head = ListNode.of(1);
         ListNode actual = exec(head, 1);
-        assertEquals(null, actual);
+        assertNull(actual);
     }
 
     @Test
     void test04() {
-        ListNode head =
-                new ListNode(1,
-                        new ListNode(2,
-                                new ListNode(3,
-                                        new ListNode(4,
-                                                new ListNode(5, null)))));
-
-        ListNode expected =
-                new ListNode(1,
-                        new ListNode(2,
-                                new ListNode(3,
-                                        new ListNode(5, null))));
-
+        ListNode head = ListNode.of(1, 2, 3, 4, 5);
         ListNode actual = exec(head, 2);
-        assertEquals(expected, actual);
+        assertEquals(ListNode.of(1, 2, 3, 5), actual);
     }
 
     private static ListNode exec(ListNode head, int n) {
