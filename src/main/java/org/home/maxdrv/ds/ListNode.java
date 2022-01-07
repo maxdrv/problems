@@ -19,4 +19,14 @@ public class ListNode {
         this.next = next;
     }
 
+    public static ListNode of(int headValue, int... values) {
+        ListNode head = new ListNode(headValue, null);
+        ListNode cur = head;
+        for (int value : values) {
+            cur.next = new ListNode(value, null);
+            cur = cur.next;
+        }
+        return head;
+    }
+
 }
