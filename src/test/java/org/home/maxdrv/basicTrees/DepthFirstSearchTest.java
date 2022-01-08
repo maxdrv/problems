@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class BreadthFirstSearch {
+public class DepthFirstSearchTest {
 
     @Test
     void test01() {
@@ -29,10 +29,11 @@ public class BreadthFirstSearch {
         TreeNode head = new TreeNode(1, two, three);
 
         List<Integer> actual = exec(head);
-        assertThat(actual).containsExactly(1, 2, 3, 4, 5, 6, 7);
+        assertThat(actual).containsExactly(1, 3, 7, 6, 2, 5, 4);
     }
 
     private static List<Integer> exec(TreeNode head) {
-        return new Traverse().bfs(head);
+        return new Traverse().dfs(head);
     }
+
 }

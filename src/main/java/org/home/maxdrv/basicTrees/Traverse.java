@@ -46,4 +46,22 @@ public class Traverse {
         return res;
     }
 
+    public List<Integer> recursionDfs(TreeNode head) {
+        if (head == null) {
+            return null;
+        }
+        List<Integer> res = new ArrayList<>();
+        step(head, res);
+        return res;
+    }
+
+    private static void step(TreeNode node, List<Integer> res) {
+        if (node == null) {
+            return;
+        }
+        res.add(node.val);
+        step(node.left, res);
+        step(node.right, res);
+    }
+
 }
