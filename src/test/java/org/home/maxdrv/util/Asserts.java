@@ -1,6 +1,9 @@
 package org.home.maxdrv.util;
 
+import org.home.maxdrv.basicTrees.DepthFirstSearch;
+import org.home.maxdrv.basicTrees.Traverse;
 import org.home.maxdrv.ds.ListNode;
+import org.home.maxdrv.ds.TreeNode;
 import org.junit.jupiter.api.Assertions;
 
 import java.util.ArrayList;
@@ -8,13 +11,24 @@ import java.util.List;
 
 public class Asserts {
 
+    private static final Traverse TRAVERSE = new Traverse();
+
     public static void assertEquals(ListNode expected, ListNode actual) {
+        nullCheck(expected, actual);
+        Assertions.assertEquals(toList(expected), toList(actual));
+    }
+
+    public static void assertEquals(TreeNode expected, TreeNode actual) {
+        nullCheck(expected, actual);
+        Assertions.assertEquals(toList(expected), toList(actual));
+    }
+
+    private static void nullCheck(Object expected, Object actual) {
         if (expected == null && actual == null) {
             return;
         }
         Assertions.assertNotNull(expected);
         Assertions.assertNotNull(actual);
-        Assertions.assertEquals(toList(expected), toList(actual));
     }
 
     private static List<Integer> toList(ListNode node) {
@@ -26,6 +40,10 @@ public class Asserts {
         }
         list.add(node.val);
         return list;
+    }
+
+    private static List<Integer> toList(TreeNode treeNode) {
+        return TRAVERSE.dfs(treeNode);
     }
 
 }
