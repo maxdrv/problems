@@ -1,6 +1,7 @@
 package org.home.maxdrv;
 
 import org.home.maxdrv.old.LongestSubstringWithoutRepeatingCharactersV1;
+import org.home.maxdrv.util.TestFunctions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -12,56 +13,49 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class LongestSubstringWithoutRepeatingCharactersTest {
 
-    @ParameterizedTest
-    @MethodSource("functions")
+    @TestFunctions
     void test01(Function<String, Integer> func) {
         String s = "abcabcbb";
         int actual = func.apply(s);
         assertEquals(3, actual);
     }
 
-    @ParameterizedTest
-    @MethodSource("functions")
+    @TestFunctions
     void test02(Function<String, Integer> func) {
         String s = "bbbbbb";
         int actual = func.apply(s);
         assertEquals(1, actual);
     }
 
-    @ParameterizedTest
-    @MethodSource("functions")
+    @TestFunctions
     void test03(Function<String, Integer> func) {
         String s = "pwwkew";
         int actual = func.apply(s);
         assertEquals(3, actual);
     }
 
-    @ParameterizedTest
-    @MethodSource("functions")
+    @TestFunctions
     void test04(Function<String, Integer> func) {
         String s = " ";
         int actual = func.apply(s);
         assertEquals(1, actual);
     }
 
-    @ParameterizedTest
-    @MethodSource("functions")
+    @TestFunctions
     void test05(Function<String, Integer> func) {
         String s = "abcdef";
         int actual = func.apply(s);
         assertEquals(6, actual);
     }
 
-    @ParameterizedTest
-    @MethodSource("functions")
+    @TestFunctions
     void test06(Function<String, Integer> func) {
         String s = "dvdf";
         int actual = func.apply(s);
         assertEquals(3, actual);
     }
 
-    @ParameterizedTest
-    @MethodSource("functions")
+    @TestFunctions
     void test07(Function<String, Integer> func) {
         String s = "abba";
         int actual = func.apply(s);

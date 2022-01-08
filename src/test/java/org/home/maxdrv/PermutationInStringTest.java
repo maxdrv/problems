@@ -2,9 +2,8 @@ package org.home.maxdrv;
 
 import org.home.maxdrv.old.PermutationInStringV1;
 import org.home.maxdrv.old.PermutationInStringV2;
-import org.junit.jupiter.params.ParameterizedTest;
+import org.home.maxdrv.util.TestFunctions;
 import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.List;
 import java.util.function.BiFunction;
@@ -14,8 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class PermutationInStringTest {
 
-    @ParameterizedTest
-    @MethodSource("functions")
+    @TestFunctions
     void test01(BiFunction<String, String, Boolean> func) {
         String s1 = "adc";
         String s2 = "dcda";
@@ -23,8 +21,7 @@ class PermutationInStringTest {
         assertTrue(actual);
     }
 
-    @ParameterizedTest
-    @MethodSource("functions")
+    @TestFunctions
     void test02(BiFunction<String, String, Boolean> func) {
         String s1 = "ab";
         String s2 = "eidbaooo";
@@ -32,8 +29,7 @@ class PermutationInStringTest {
         assertTrue(actual);
     }
 
-    @ParameterizedTest
-    @MethodSource("functions")
+    @TestFunctions
     void test03(BiFunction<String, String, Boolean> func) {
         String s1 = "ab";
         String s2 = "eidboaoo";
