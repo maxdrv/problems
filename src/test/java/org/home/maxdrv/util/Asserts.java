@@ -1,6 +1,6 @@
 package org.home.maxdrv.util;
 
-import org.home.maxdrv.basicTrees.Traverse;
+import org.home.maxdrv.basicTrees.DepthFirstSearch;
 import org.home.maxdrv.ds.ListNode;
 import org.home.maxdrv.ds.TreeNode;
 import org.junit.jupiter.api.Assertions;
@@ -10,7 +10,7 @@ import java.util.List;
 
 public class Asserts {
 
-    private static final Traverse TRAVERSE = new Traverse();
+    private static final DepthFirstSearch TRAVERSE = new DepthFirstSearch();
 
     public static void assertEquals(ListNode expected, ListNode actual) {
         nullCheck(expected, actual);
@@ -42,7 +42,7 @@ public class Asserts {
     }
 
     private static List<Integer> toList(TreeNode treeNode) {
-        return TRAVERSE.dfs(treeNode);
+        return TRAVERSE.traverse(treeNode);
     }
 
 }

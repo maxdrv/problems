@@ -34,7 +34,7 @@ public class RecursionDepthFirstSearchTest {
     }
 
     private static List<Integer> exec(TreeNode head) {
-        return new Traverse().recursionDfs(head);
+        return new RecursionDepthFirstSearch().traverse(head);
     }
 
 

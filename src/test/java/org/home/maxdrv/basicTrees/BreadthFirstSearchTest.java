@@ -33,6 +33,6 @@ public class BreadthFirstSearchTest {
     }
 
     private static List<Integer> exec(TreeNode head) {
-        return new Traverse().bfs(head);
+        return new BreadthFirstSearch().traverse(head);
     }
 }

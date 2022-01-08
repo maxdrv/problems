@@ -33,7 +33,7 @@ public class DepthFirstSearchTest {
     }
 
     private static List<Integer> exec(TreeNode head) {
-        return new Traverse().dfs(head);
+        return new DepthFirstSearch().traverse(head);
     }
 
 }
