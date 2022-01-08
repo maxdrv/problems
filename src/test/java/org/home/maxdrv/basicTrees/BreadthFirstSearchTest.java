@@ -11,7 +11,7 @@ public class BreadthFirstSearchTest {
 
     @Test
     void test01() {
-        TreeNode head = new TreeNode(1, null, null);
+        TreeNode head = new TreeNode(1);
 
         List<Integer> actual = exec(head);
         assertThat(actual).containsExactly(1);
@@ -19,10 +19,10 @@ public class BreadthFirstSearchTest {
 
     @Test
     void test02() {
-        TreeNode four = new TreeNode(4, null, null);
-        TreeNode five = new TreeNode(5, null, null);
-        TreeNode six = new TreeNode(6, null, null);
-        TreeNode seven = new TreeNode(7, null, null);
+        TreeNode four = new TreeNode(4);
+        TreeNode five = new TreeNode(5);
+        TreeNode six = new TreeNode(6);
+        TreeNode seven = new TreeNode(7);
 
         TreeNode two = new TreeNode(2, four, five);
         TreeNode three = new TreeNode(3, six, seven);
